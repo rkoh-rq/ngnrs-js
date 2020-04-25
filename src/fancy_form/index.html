@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fancy Form by Rachel</title>
+  <!-- Credits to 
+    https://www.flaticon.com/packs/phone-icons for the phone icon
+    https://www.svgbackgrounds.com/ for the background
+    https://www.atlastravelweb.com/ for the load icon
+  -->
+
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- You may wrap the form in your own elements if necessary. -->
+  <div class="header">
+    <div class="fancy">makeit </div>
+    <div class="fancy" style="font-family: Chancery, cursive"> fancy</div>
+    <div class="exclamation">!</div>
+  </div>
+  
+  <div class="container">
+
+    <section id = "home">
+
+      <form id="regForm" action="">
+        
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">
+          <label for="input-amount">Amount to send</label>
+          <input type="number" id="input-amount" min="0" placeholder="0.0000" />
+          <p class="errormsg" id ="error-amount"> </p>
+          <label for="input-address">Bitcoin Address</label>
+          <p class="errormsg" id ="error-address"> </p>
+          <input id="input-address" placeholder="16q4PinynazaMYfv24juNLkbjkDQxJo2dc" oninput="this.className = ''"></p>
+          <p class="errormsg" id ="error-address"> </p>
+        </div>
+        
+        <div class="tab">
+          <label for="input-otp">OTP Authentication</label>
+          <p style= "font-size: 0.7rem; opacity: 0.5;"> Enter the 6 digit code sent to your mobile phone</p>
+          <div class="inputOTP" style="text-align:center">
+            <p><img src="phone-icons.png" alt="123456" width="100" height="100"></p>
+            <input placeholder="0" type="text" maxlength="1" oninput="this.className = ''; nextOTP(this.id)"/>
+            <input placeholder="0" type="text" maxlength="1" oninput="this.className = ''"/>
+            <input placeholder="0" type="text" maxlength="1" oninput="this.className = ''"/>
+            <input placeholder="0" type="text" maxlength="1" oninput="this.className = ''"/>
+            <input placeholder="0" type="text" maxlength="1" oninput="this.className = ''"/>
+            <input placeholder="0" type="text" maxlength="1" oninput="this.className = ''"/>
+          </div>
+          <p class="errormsg" id ="error-otp"> </p>
+        </div>
+        
+        <div class="tab">
+          <div style="text-align: center;">
+            <img src="load.gif" alt="Loading..." width="200" height="150"></p>
+            <p style= "font-size: 0.7rem; opacity: 0.5;"> Well that's all. Click submit to submit nothing</p>
+            <p><a href=#about>or try me!</a></p>
+          </div>
+        </div>
+  
+        <div style="overflow:auto;">
+          <div style="text-align:center">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </form>
+      <script src="formscript.js"></script>
+    <!-- Animation box for fancy animations -->
+      <div class="animation-box">
+        <div class="first-text">Beyond Traditional Currency</div>
+        <div class="second-text">Reliable, secure bitcoin transactions</div>
+        <div class="third-text">Worldwide payment system at your fingertips</div>
+        <div class="fourth-text">Try it!</div>
+      </div>
+    </section>
+
+    <section id = "about"> 
+      <div class="animation-box">
+        <div class="text1">What are bitcoins</div>
+        <div class="text2">Bitcoin is a form of cryptocurrency. <br><br> It enables payments to be made between users without passing through a central authority, such as banks or payment gateways.</div>
+      </div>
+      <img src="btc.gif" alt="Bitcoin" width="400" height="300" style ="padding-right: 10%"></p>
+      </section>
+
+  </div>
+</body>
+
+</html>
